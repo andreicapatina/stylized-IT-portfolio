@@ -1,0 +1,698 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1050px;
+    width: 80%;
+    margin: auto;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+  
+.navbar {
+    width: 100%;
+    box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+  
+.nav-container {
+    display: block;
+    position: relative;
+    height: 60px;
+}
+
+/* ------ Logo ------ */
+.logo {
+    position: absolute;
+    top: 10px;
+    /* left: 15px; */
+    font-size: 1.2rem;
+    color: #0e2431;
+}
+
+.nav-container .checkbox {
+    display: none;
+}
+
+.navbar .nav-container a {
+    text-decoration: none;
+    color: #0e2431;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.7rem;
+}
+
+.navbar .menu-items li {
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.navbar .menu-items {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: flex;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+/* -------Header section------- */
+
+.intro-section {
+    height: 70vh;
+    background-image: url(./images/background-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.about-me-intro .small-font {
+    color: white; 
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+.about-me-intro .big-font {
+    color: white; 
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.cv-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 36px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #0056b3; /* Schimbă culoarea la hover */
+}
+
+
+/* ---- Section titles and subtitles----- */
+.section-black {
+    background-color: black;
+}
+
+.section-title {
+    font-size: 40px; 
+    font-weight: 500;
+}
+
+.white-text {
+    color: white;
+}
+
+.line-container {
+    position: relative;
+    text-align: center; /* Center the text */
+    color: #0056b3;
+    margin-bottom: 60px;
+}
+
+.line-container::before,
+.line-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 3px;
+}
+
+.black-lines::before,
+.black-lines::after {
+    background-color: black;
+}
+
+.white-lines {
+    color: #00aaff;
+}
+
+.white-lines::before,
+.white-lines::after {
+    background-color: white;
+}
+
+.line-container::before {
+    left: 80px;
+}
+
+.line-container::after {
+    right: 80px;
+}
+
+#contacts .line-container::before {
+    left: 100px;
+}
+
+#contacts .line-container::after {
+    right: 100px;
+}
+
+/* ------- About me section ------ */
+.about-me-info {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+
+}
+
+.about-me-photo {
+    flex: 0 0 350px;
+    height: 350px; 
+    overflow: hidden; 
+    border-radius: 20px;
+    margin-right: 50px;
+}
+
+.about-me-photo img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.about-me-info-text {
+    flex: 1; /* Permite textului să ocupe spațiul rămas */
+}
+
+
+/* Services */
+
+.services-container {
+    display: flex;
+    width: 100%;
+    /* justify-content: flex-start; */
+    justify-content: center;
+
+    flex-wrap: wrap;
+}
+
+.services-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: #222222;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    max-width: 300px;
+    border-radius: 5px;
+
+    margin: 0 20px 40px 20px;
+}
+
+.services-items i {
+    color: #00aaff;
+}
+
+.services-items h2 {
+    font-size: 26px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.services-items p {
+    font-size: 16px;
+    text-align: center;
+    color: #ebebeb;
+    margin: 10px 20px 0 20px;
+}
+
+
+/* Skills section */
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-info {
+    width: 45%;
+}
+
+.skills-chart {
+    width: 45%;
+}
+
+.skills-container h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.skills-chart {
+    display: flex;
+    flex-direction: column;
+    height: 150px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.skills-chart-item {
+    position: relative;
+}
+
+.bar {
+    height: 5px;
+    background-color: #ccc;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background-color: #194d6d;
+    width: 0%;
+    border-radius: 5px 0 0 5px;
+}
+
+.percentage {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/* ------ Projects section ------ */
+
+
+
+#cCarousel {
+    position: relative;
+    max-width: 1050px;
+    width: 100%;
+    /* margin: auto; */
+
+    @media (max-width: 1200px) {
+        #carousel-vp {
+          width: 610px;
+        }
+    }
+      
+    @media (max-width: 850px) {
+        #carousel-vp {
+          width: 300px;
+        }
+    }
+  }
+  
+#cCarousel .arrow {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 26px;
+  color: white;
+  background: #00000072;
+  cursor: pointer;
+}
+
+#cCarousel #prev {
+  left: 0px;
+}
+
+#cCarousel #next {
+  right: 0px;
+}
+
+#carousel-vp {
+  width: 920px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+#cCarousel #cCarousel-inner {
+  display: flex;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  gap: 10px;
+  left: 0px;
+}
+
+#cCarousel-inner a {
+    text-decoration: none;
+}
+
+.cCarousel-item {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 50px 25px;
+  font-size: 26px;
+  font-weight: 500;
+  color: #ebebeb;
+  background-color: #1f1f1f;
+  border-radius: 6px;
+}
+  
+.card-image {
+    height: 150px;
+    width: 250px;
+    margin-bottom: 15px;
+}
+
+.cCarousel-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+  
+  
+/* ------ Contacts ------ */
+.contact-info h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 16px;
+}
+
+.contact-info-item {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info-item i {
+    color: #095cb6;
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.bold-text {
+    font-weight: 500;
+}
+
+.form-container h2 {
+    font-size: 26px;
+    font-weight: 600;
+}
+  
+.form-group {
+    margin-bottom: 15px;
+}
+
+input,
+textarea {
+    width: calc(100% - 20px);
+    padding: 16px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+input[id="name"],
+input[id="email"] {
+    display: inline-block;
+    width: calc(50% - 12px);
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 80px;
+}
+
+.form-container button {
+    background-color: #095cb6;
+    color: white;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+  
+.form-container button:hover {
+    background-color: #194d6d;
+}
+
+.contact-contaier {
+    display: flex;
+}
+
+.contact-info {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.form-container {
+    margin-top: 26px;
+}
+  
+
+/* ------ Footer ------ */
+footer {
+    background-color: black;
+    color: white;
+    padding: 16px 24px;
+    text-align: center;
+}
+
+footer h4 {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+footer i {
+    color: #095cb6;
+}
+
+#back-to-top-button {
+    position: fixed; 
+    right: 10px; 
+    bottom: 10px; 
+    text-align: right;
+    
+    font-style: italic;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+footer button {
+    background-color: #095cb6;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+footer button:hover {
+    background-color: #194d6d;
+}
+
+@media only screen and (max-width: 948px) {
+    .nav-container .checkbox {
+        display: block;
+    }
+    
+    /* ------ Menu items ------ */
+    .navbar .menu-items {
+        margin-top: 49px;
+        padding-top: 60px;
+        box-shadow: inset 0 1000px 2000px rgba(255, 255, 255);
+        height: 110dvh;
+        width: 120%;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        /* margin-left: -40px; */
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+        z-index: 99999;
+    }
+    
+    .navbar .menu-items li {
+        list-style: none;
+    
+        margin-bottom: 1.2rem;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    .navbar .nav-container a {
+        text-decoration: none;
+        color: #0e2431;
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 0.7rem;
+    }
+    
+    /* --- Hambourger menu --- */
+    .checkbox {
+        position: absolute;
+        display: block;
+        height: 26px;
+        width: 32px;
+        top: 20px;
+        right: 0px;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+    
+    .hamburger-lines {
+        display: block;
+        height: 26px;
+        width: 32px;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+    }
+    
+    .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+    }
+    
+    .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+    
+    
+    /* ------ Menu animations ------ */
+    .nav-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+    }
+    
+    .nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+    }
+
+    /* About me section */
+    
+    .about-me-info {
+        display: flex;
+        flex-wrap: wrap; 
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-photo {
+        width: 350px; 
+        height: 350px; 
+        overflow: hidden; 
+        border-radius: 20px;
+        margin-bottom: 50px;
+        margin-right: 0;
+    }
+
+    .about-me-photo img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    /* ------ SKills section ------ */
+    .skills-container {
+        display: block;
+    }
+    
+    .skills-info {
+        width: 100%;
+    }
+    
+    .skills-chart {
+        width: 100%;
+    }
+
+    /* ------ Contacts ------ */
+    .contact-contaier {
+        display: block;
+    }
+    
+    .contact-info {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
